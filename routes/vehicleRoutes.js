@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const vehicleController = require("../controllers/vehicleController");
 
+
 // Check vehicle availability
 router.get("/:vehicleId/availability", vehicleController.checkAvailability);
 

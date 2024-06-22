@@ -3,13 +3,19 @@ const Vehicle = require("../models/vehicle");
 const vehicleController = {
   // Check vehicle availability
   async checkAvailability(req, res) {
+    console.log("we got hit");
+
     const { vehicleId } = req.params;
     const { startDate, endDate } = req.query;
 
+    console.log(vehicleId, startDate, endDate)
+
     try {
       const vehicle = await Vehicle.findOne({ vehicleId });
+      
       if (!vehicle) {
         return res.status(404).json({ message: "Vehicle not found" });
+
       }
 
       const isAvailable = vehicle.schedules.every(
@@ -62,7 +68,7 @@ const vehicleController = {
         return res.status(404).json({ message: "Vehicle not found" });
       }
 
-      // (Optional) Check for schedule conflicts here if needed
+      // Check for schedule conflicts here if needed
 
       vehicle.schedules.push({ activityType, startDate, endDate });
       await vehicle.save();

@@ -1,0 +1,42 @@
+[
+  {
+    "vehicleId": "V12345",
+    "schedules": [
+      {
+        "activityType": "trip",
+        "startDate": "2024-07-05T10:00:00Z",
+        "endDate": "2024-07-08T16:30:00Z"
+      },
+      {
+        "activityType": "available",
+        "startDate": "2024-07-09T00:00:00Z",
+        "endDate": "2024-07-14T23:59:59Z"
+      },
+      {
+        "activityType": "maintenance",
+        "startDate": "2024-07-15T09:00:00Z",
+        "endDate": "2024-07-16T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "vehicleId": "AB6789",
+    "schedules": [
+      {
+        "activityType": "available",
+        "startDate": "2024-07-01T00:00:00Z",
+        "endDate": "2024-07-04T23:59:59Z"
+      },
+      {
+        "activityType": "trip",
+        "startDate": "2024-07-05T14:00:00Z",
+        "endDate": "2024-07-10T18:00:00Z"
+      },
+      {
+        "activityType": "available",
+        "startDate": "2024-07-11T00:00:00Z",
+        "endDate": "2024-07-31T23:59:59Z"
+      }
+    ]
+  }
+]
